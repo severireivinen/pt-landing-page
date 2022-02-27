@@ -1,20 +1,30 @@
 .app__header {
-  flex: 1;
   width: 100%;
-  height: 100%;
-  flex-direction: row;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  padding: 6rem 2rem 0;
+.app__header-head {
+  padding: 0rem 1rem 0rem 1rem;
+
+  @media screen and (min-width: 450px) {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+}
+
+.app__header-paragraph {
+  width: 60%;
+  margin-top: 2rem;
+  color: var(--white-color);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 100;
 
   @media screen and (min-width: 2000px) {
-    padding-top: 8rem;
-  }
-
-  @media screen and (max-width: 1200px) {
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 450px) {
-    padding: 6rem 1rem 2rem;
+    font-size: 2.15rem;
   }
 }
