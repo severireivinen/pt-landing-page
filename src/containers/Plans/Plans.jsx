@@ -12,7 +12,7 @@ const plansData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
     price: "39,99€",
     imgUrl: images.gym,
-    tags: ["Treeniohjelmat", "Kaikki"],
+    tags: ["Training Programs", "All"],
   },
   {
     id: 1,
@@ -21,7 +21,7 @@ const plansData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
     price: "10,99€",
     imgUrl: images.gym,
-    tags: ["Ruokavaliot", "Kaikki"],
+    tags: ["Diets", "All"],
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const plansData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
     price: "29,99€",
     imgUrl: images.gym,
-    tags: ["Ruokavaliot", "Kaikki"],
+    tags: ["Diets", "All"],
   },
   {
     id: 3,
@@ -39,30 +39,24 @@ const plansData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
     price: "99,99€",
     imgUrl: images.gym,
-    tags: ["Treeniohjelmat", "Kaikki"],
+    tags: ["Training Programs", "All"],
   },
 ];
 
 const Plans = () => {
-  const [activeFilter, setActiveFilter] = useState("Kaikki");
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [activeFilter, setActiveFilter] = useState("All");
   const [plans, setPlans] = useState(plansData);
   const [filterPlans, setFilterPlans] = useState(plansData);
   const [isHovering, setIsHovering] = useState({});
 
   const handlePlanFilter = (item) => {
     setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
 
-    setTimeout(() => {
-      setAnimateCard([{ y: onabort, opacity: 100 }]);
-
-      if (item === "Kaikki") {
-        setFilterPlans(plans);
-      } else {
-        setFilterPlans(plans.filter((plan) => plan.tags.includes(item)));
-      }
-    });
+    if (item === "All") {
+      setFilterPlans(plans);
+    } else {
+      setFilterPlans(plans.filter((plan) => plan.tags.includes(item)));
+    }
   };
 
   const handleMouseOver = (index) => {
@@ -90,7 +84,7 @@ const Plans = () => {
         </motion.h2>
       </div>
       <div className="app__plans-filter">
-        {["Treeniohjelmat", "Ruokavaliot", "Kaikki"].map((item, index) => (
+        {["Training Programs", "Diets", "All"].map((item, index) => (
           <div
             key={index}
             onClick={() => handlePlanFilter(item)}
@@ -103,14 +97,13 @@ const Plans = () => {
         ))}
       </div>
       <motion.div
-        animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         className="app__plans-container"
       >
         {filterPlans.map((plan, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: [1, 1.5] }}
+            whileHover={{ scale: [1, 1.3] }}
             onMouseOver={() => handleMouseOver(index)}
             onMouseLeave={handleMouseLeave}
             className="app__plans-item app__flex"

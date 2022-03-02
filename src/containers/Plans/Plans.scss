@@ -69,7 +69,8 @@
     width: 200px;
     height: 200px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    text-align: center;
 
     margin: 1rem;
     padding: 1rem;
@@ -88,6 +89,7 @@
 
     .app__plans-description {
       font-size: 0.7rem;
+      margin: 0.5rem 0;
     }
 
     @media screen and (min-width: 2000px) {
@@ -103,11 +105,4 @@
       margin: 1rem;
     }
   }
-}
-
-.app__plans-content {
-  padding: 0.5rem;
-  width: 100%;
-  position: relative;
-  flex-direction: column;
 }
