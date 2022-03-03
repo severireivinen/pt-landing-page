@@ -21,6 +21,7 @@ const About = () => {
           temporibus ratione magni pariatur debitis culpa minus esse adipisci.
         </p>
       </motion.div>
+
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -28,8 +29,9 @@ const About = () => {
       >
         <img src={images.profile} alt=" me" />
       </motion.div>
+
       <motion.div
-        whileInView={{ x: [0, -100], opacity: [0, 1] }}
+        whileInView={{ x: [100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="app__about-offer"
       >

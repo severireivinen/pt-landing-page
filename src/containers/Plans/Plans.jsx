@@ -7,36 +7,36 @@ import "./Plans.scss";
 const plansData = [
   {
     id: 0,
-    name: "Get Huge",
+    name: "Training program #1",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt.",
     price: "39,99€",
     imgUrl: images.gym,
     tags: ["Training Programs", "All"],
   },
   {
     id: 1,
-    name: "Mass Gain",
+    name: "Diet #1",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt.",
     price: "10,99€",
     imgUrl: images.gym,
     tags: ["Diets", "All"],
   },
   {
     id: 2,
-    name: "Carp",
+    name: "Diet #2",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt.",
     price: "29,99€",
     imgUrl: images.gym,
     tags: ["Diets", "All"],
   },
   {
     id: 3,
-    name: "Get Shred",
+    name: "Training program #2",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt quaerat molestiae recusandae.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatum nemo ipsa quisquam voluptatem natus aut facere suscipit neque quam dolorum nesciunt.",
     price: "99,99€",
     imgUrl: images.gym,
     tags: ["Training Programs", "All"],

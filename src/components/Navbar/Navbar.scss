@@ -14,13 +14,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 1rem 0;
 
   img {
-    width: 40px;
+    width: 100px;
     height: 40px;
+    position: absolute;
 
     @media screen and (min-width: 2000px) {
-      width: 80px;
+      width: 200px;
       height: 80px;
     }
   }

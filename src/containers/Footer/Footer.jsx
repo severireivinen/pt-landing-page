@@ -56,7 +56,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <h2>Or Message Me</h2>
+      <div className="app__footer-hr">
+        <hr />
+        <p>Or Message Me</p>
+        <hr />
+      </div>
 
       <motion.div
         className="app__flex app__footer-form"
@@ -96,6 +100,12 @@ const Footer = () => {
           {loading ? "Sending..." : "Send Message"}
         </button>
       </motion.div>
+
+      <div className="copyright p-text app__flex">
+        <p>SITE TEMPLATE</p>
+        <p>@2022 SEVERI REIVINEN</p>
+        <p>ALL RIGHTS RESERVED</p>
+      </div>
     </div>
   );
 };
