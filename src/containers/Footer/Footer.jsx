@@ -11,7 +11,7 @@ const Footer = () => {
     email: "",
     message: "",
   });
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  //const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { name, email, message } = formData;
